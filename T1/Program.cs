@@ -3,7 +3,7 @@ using CH.Testing.T1.Component;
 
 namespace CH.Testing.T1
 {
-    internal sealed class Program
+    public static class Program
     {
         [ExcludeFromCodeCoverage]
         // Bootstrap code is difficult to test, and since it is in the critical path it makes 
@@ -17,6 +17,12 @@ namespace CH.Testing.T1
 
             // Go
             app.Run();
+        }
+
+        [ExcludeFromCodeCoverage]
+        public static void OriginalMain(string[] args)
+        {
+            System.Console.WriteLine("Hello World");
         }
     }
 }

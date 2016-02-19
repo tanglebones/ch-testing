@@ -6,9 +6,9 @@ using CH.Testing.T3.Interface;
 namespace CH.Testing.T3
 {
     [ExcludeFromCodeCoverage]
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Wiring
             var outputter = new ConsoleOutputter() as IOutputter;

@@ -7,7 +7,7 @@ using CH.Testing.T2.Interface;
 
 namespace CH.Testing.T2
 {
-    internal class Program
+    public static class Program
     {
         [ExcludeFromCodeCoverage]
         public static void Main(string[] args)

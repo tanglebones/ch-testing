@@ -40,13 +40,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\CurrentDateTimeMessageProvider.cs" />
+    <Compile Include="Component\CurrentDateTimeProvider.cs" />
+    <Compile Include="E01ProgramHelloWorld.cs" />
+    <Compile Include="E02ProgramCurrentTime.cs" />
+    <Compile Include="E03ProgramHelloWorld.cs" />
+    <Compile Include="Interface\IDateTimeProvider.cs" />
     <Compile Include="MessageApp.cs" />
     <Compile Include="Component\ConsoleOutputter.cs" />
     <Compile Include="Component\HelloMessageProvider.cs" />
     <Compile Include="Interface\IApp.cs" />
     <Compile Include="Interface\IMessageProvider.cs" />
     <Compile Include="Interface\IOutputter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="E04ProgramCurrentTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace CH.Testing.T1
@@ -7,7 +8,7 @@ namespace CH.Testing.T1
         [ExcludeFromCodeCoverage]
         public static void OriginalMain(string[] args)
         {
-            System.Console.WriteLine("Hello World");
+            Console.WriteLine("Hello World");
         }
     }
 }

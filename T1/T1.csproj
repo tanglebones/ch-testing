@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CH.Testing.T1.Program</StartupObject>
+    <StartupObject>CH.Testing.T1.E04ProgramCurrentTime</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

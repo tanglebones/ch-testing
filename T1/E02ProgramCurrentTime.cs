@@ -8,7 +8,7 @@ namespace CH.Testing.T1
         [ExcludeFromCodeCoverage]
         public static void OriginalMainWithDate(string[] args)
         {
-            System.Console.WriteLine("The current time is: " + DateTime.Now);
+            Console.WriteLine("The current time is: " + DateTime.Now);
         }
     }
 }

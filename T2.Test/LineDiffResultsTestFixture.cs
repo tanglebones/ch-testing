@@ -27,7 +27,7 @@ namespace CH.Testing.T2.Test
             var lineDiffAlgoDiffCall = A.CallTo(() => lineDiffAlgo.Diff(aLines,bLines));
             var expected = new[] {A.Fake<ILineDiffResult>()};
             lineDiffAlgoDiffCall.Returns(expected);
-            var ld = new LineDiffResults(lineDiffAlgo, aLinesSource, bLinesSource);
+            var ld = new LineDiffResults(lineDiffAlgo, aLinesSource, bLinesSource) as ILineDiffResults;
 
             // Act
             var actual = ld.Results();

@@ -5,7 +5,7 @@ namespace CH.Testing.T1.Component
 {
     internal sealed class CurrentDateTimeProvider : IDateTimeProvider
     {
-        public DateTime Value
+        DateTime IDateTimeProvider.Value
         {
             get { return DateTime.Now; }
         }

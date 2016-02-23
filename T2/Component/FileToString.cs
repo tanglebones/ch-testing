@@ -9,7 +9,7 @@ namespace CH.Testing.T2.Component
     // System Wrapper
     internal sealed class FileToString : INamedSourceToString
     {
-        public string ReadFrom(string name)
+        string INamedSourceToString.ReadFrom(string name)
         {
             try
             {

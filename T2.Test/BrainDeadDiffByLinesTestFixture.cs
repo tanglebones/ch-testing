@@ -19,7 +19,7 @@ namespace CH.Testing.T2.Test
         public void Simple(IEnumerable<string> a, IEnumerable<string> b, IEnumerable<string> expected)
         {
             // Arrange
-            var differ = new BrianDeadLineDiffByLine() as ILineDiffAlgo;
+            var differ = new BrainDeadLineDiffByLine() as ILineDiffAlgo;
 
             // Act
             var actual = differ.Diff(a, b);

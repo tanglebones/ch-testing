@@ -13,7 +13,7 @@ namespace CH.Testing.T1
             _outputter = outputter;
         }
 
-        public void Run()
+        void IApp.Run()
         {
             _outputter.Output(_messageProvider.Message);
         }

@@ -22,7 +22,7 @@ namespace CH.Testing.T2
             var bFileNameArgMap = new ArgMappingByPosition(argParser, 1) as ISource<string>;
             var fileReader = new FileToString() as INamedSourceToString;
             var lineParser = new LineParser() as ILineParser;
-            var lineDiffAlgo = new BrianDeadLineDiffByLine() as ILineDiffAlgo;
+            var lineDiffAlgo = new BrainDeadLineDiffByLine() as ILineDiffAlgo;
             var aContent = new NamedSourceResolver(fileReader, aFileNameArgMap) as ISource<string>;
             var aLinesSource = new LinesResolver(lineParser, aContent) as ISource<IEnumerable<string>>;
             var bContent = new NamedSourceResolver(fileReader, bFileNameArgMap) as ISource<string>;

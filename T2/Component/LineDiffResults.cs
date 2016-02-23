@@ -16,7 +16,7 @@ namespace CH.Testing.T2.Component
         private readonly ISource<IEnumerable<string>> _bLinesSource;
         private readonly ILineDiffAlgo _lineDiffAlgo;
 
-        public IEnumerable<ILineDiffResult> Results()
+        IEnumerable<ILineDiffResult> ILineDiffResults.Results()
         {
             return _lineDiffAlgo.Diff(_aLinesSource.Value, _bLinesSource.Value);
         }

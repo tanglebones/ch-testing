@@ -11,7 +11,7 @@ namespace CH.Testing.T1.Component
             _dateTimeProvider = dateTimeProvider;
         }
 
-        public string Message
+        string IMessageProvider.Message
         {
             get { return "The current time is: " + _dateTimeProvider.Value; }
         }

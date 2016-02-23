@@ -8,7 +8,7 @@ namespace CH.Testing.T1.Component
     {
         // System Wrapper, verified by system test.
         [ExcludeFromCodeCoverage]
-        public void Output(string what)
+        void IOutputter.Output(string what)
         {
             Console.Out.WriteLine(what);
         }

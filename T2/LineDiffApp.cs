@@ -15,7 +15,7 @@ namespace CH.Testing.T2
             _lineDiffResults = lineDiffResults;
         }
 
-        public void Run()
+        void IApp.Run()
         {
             try
             {

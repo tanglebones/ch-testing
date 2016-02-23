@@ -21,7 +21,7 @@ namespace CH.Testing.T2.Test
             var byOrderCall = A.CallTo(() => argParser.ByOrder(pos));
             byOrderCall.Returns(expected);
 
-            var argMapper = new ArgMappingByPosition(argParser, pos);
+            var argMapper = new ArgMappingByPosition(argParser, pos) as ISource<string>;
 
             // Act
             var actual = argMapper.Value;

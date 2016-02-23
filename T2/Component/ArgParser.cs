@@ -11,7 +11,7 @@ namespace CH.Testing.T2.Component
             _args = args;
         }
 
-        public string ByOrder(int i)
+        string IArgParser.ByOrder(int i)
         {
             return _args[i];
         }

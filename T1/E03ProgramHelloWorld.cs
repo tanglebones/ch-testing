@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using CH.Testing.T1.Component;
+using CH.Testing.T1.Interface;
 
 namespace CH.Testing.T1
 {
@@ -13,7 +14,7 @@ namespace CH.Testing.T1
             // Infrastructure Wiring
             var outputter = new ConsoleOutputter();
             var messageProvider = new HelloMessageProvider();
-            var app = new MessageApp(messageProvider, outputter);
+            var app = new MessageApp(messageProvider, outputter) as IApp;
 
             // Go
             app.Run();

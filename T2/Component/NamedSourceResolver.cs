@@ -13,6 +13,6 @@ namespace CH.Testing.T2.Component
             _fileNameSource = fileNameSource;
         }
 
-        public string Value { get { return _fileReader.ReadFrom(_fileNameSource.Value); } }
+        string ISource<string>.Value { get { return _fileReader.ReadFrom(_fileNameSource.Value); } }
     }
 }

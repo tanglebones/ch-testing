@@ -13,7 +13,7 @@ namespace CH.Testing.T2.Component
             _pos = pos;
         }
 
-        public string Value
+        string ISource<string>.Value
         {
             get { return _argParser.ByOrder(_pos); }
         }

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using CH.Testing.T2.Component;
 using CH.Testing.T2.Interface;
 using FakeItEasy;
@@ -22,7 +23,7 @@ namespace CH.Testing.T2.Test
             lineParserParseCall.Returns(expected);
             var contentSourceValueCall = A.CallTo(() => contentSource.Value);
             contentSourceValueCall.Returns(content);
-            var linesResolver = new LinesResolver(lineParser, contentSource);
+            var linesResolver = new LinesResolver(lineParser, contentSource) as ISource<IEnumerable<string>>;
 
             // Act
             var actual = linesResolver.Value;

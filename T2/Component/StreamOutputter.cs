@@ -12,8 +12,7 @@ namespace CH.Testing.T2.Component
             _stream = stream;
         }
 
-
-        public void Output(string s)
+        void IOutputter.Output(string s)
         {
             _stream.WriteLine(s);
         }

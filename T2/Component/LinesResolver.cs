@@ -14,6 +14,6 @@ namespace CH.Testing.T2.Component
             _source = source;
         }
 
-        public IEnumerable<string> Value { get { return _lineParser.Parse(_source.Value); } }
+        IEnumerable<string> ISource<IEnumerable<string>>.Value { get { return _lineParser.Parse(_source.Value); } }
     }
 }

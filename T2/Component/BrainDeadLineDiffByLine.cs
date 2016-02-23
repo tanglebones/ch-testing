@@ -3,9 +3,9 @@ using CH.Testing.T2.Interface;
 
 namespace CH.Testing.T2.Component
 {
-    internal sealed class BrianDeadLineDiffByLine : ILineDiffAlgo
+    internal sealed class BrainDeadLineDiffByLine : ILineDiffAlgo
     {
-        public IEnumerable<ILineDiffResult> Diff(IEnumerable<string> a, IEnumerable<string> b)
+        IEnumerable<ILineDiffResult> ILineDiffAlgo.Diff(IEnumerable<string> a, IEnumerable<string> b)
         {
             var aLines = a.GetEnumerator();
             var bLines = b.GetEnumerator();
@@ -39,34 +39,39 @@ namespace CH.Testing.T2.Component
             }
         }
 
-        internal class Add : ILineDiffResult
+        private sealed class Add : ILineDiffResult
         {
+            private readonly string _asString;
+
             public Add(string line)
             {
-                AsString = "+|" + line;
+                _asString = "+|" + line;
             }
 
-            public string AsString { get; private set; }
+            string ILineDiffResult.AsString { get { return _asString; } }
         }
 
-        internal class Equal : ILineDiffResult
+        private sealed class Equal : ILineDiffResult
         {
+            private readonly string _asString;
             public Equal(string line)
             {
-                AsString = "=|" + line;
+                _asString = "=|" + line;
             }
 
-            public string AsString { get; private set; }
+            string ILineDiffResult.AsString { get { return _asString; } }
         }
 
-        internal class Subtraction : ILineDiffResult
+        private sealed class Subtraction : ILineDiffResult
         {
+            private readonly string _asString;
+
             public Subtraction(string line)
             {
-                AsString = "-|" + line;
+                _asString = "-|" + line;
             }
 
-            public string AsString { get; private set; }
+            string ILineDiffResult.AsString { get { return _asString; } }
         }
     }
 }

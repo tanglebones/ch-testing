@@ -14,7 +14,7 @@ namespace CH.Testing.T3
             var outputter = new ConsoleOutputter() as IOutputter;
             var results = new DumbyCounter() as ISource<IEnumerable<string>>;
             var resultOutputter = new ResultOutputter(outputter, results) as IResultOutputter;
-            
+
             // App
             resultOutputter.Output();
         }

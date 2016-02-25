@@ -6,8 +6,8 @@ namespace CH.Testing.T2
 {
     internal sealed class LineDiffApp : IApp
     {
-        private readonly IOutputter _outputter;
         private readonly ILineDiffResults _lineDiffResults;
+        private readonly IOutputter _outputter;
 
         public LineDiffApp(IOutputter outputter, ILineDiffResults lineDiffResults)
         {

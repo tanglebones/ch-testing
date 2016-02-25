@@ -48,18 +48,25 @@ namespace CH.Testing.T2.Component
                 _asString = "+|" + line;
             }
 
-            string ILineDiffResult.AsString { get { return _asString; } }
+            string ILineDiffResult.AsString
+            {
+                get { return _asString; }
+            }
         }
 
         private sealed class Equal : ILineDiffResult
         {
             private readonly string _asString;
+
             public Equal(string line)
             {
                 _asString = "=|" + line;
             }
 
-            string ILineDiffResult.AsString { get { return _asString; } }
+            string ILineDiffResult.AsString
+            {
+                get { return _asString; }
+            }
         }
 
         private sealed class Subtraction : ILineDiffResult
@@ -71,7 +78,10 @@ namespace CH.Testing.T2.Component
                 _asString = "-|" + line;
             }
 
-            string ILineDiffResult.AsString { get { return _asString; } }
+            string ILineDiffResult.AsString
+            {
+                get { return _asString; }
+            }
         }
     }
 }

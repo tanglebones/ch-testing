@@ -10,8 +10,8 @@ namespace CH.Testing.T2.Test
     internal sealed class LineParserTestFixture
     {
         [Test]
-        [TestCase(new object[] { "a\r\nb", new[] { "a", "b" } }, TestName = "\"a\\r\\nb\" -> [\"a\", \"b\"]")]
-        [TestCase(new object[] { "", new[] { "" } }, TestName = "\"\" -> [\"\"]")]
+        [TestCase(new object[] {"a\r\nb", new[] {"a", "b"}}, TestName = "\"a\\r\\nb\" -> [\"a\", \"b\"]")]
+        [TestCase(new object[] {"", new[] {""}}, TestName = "\"\" -> [\"\"]")]
         public void Simple(string input, string[] expected)
         {
             // Arrange

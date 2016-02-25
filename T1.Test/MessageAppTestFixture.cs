@@ -7,7 +7,7 @@ namespace CH.Testing.T1.Test
     [TestFixture]
     [ExcludeFromCodeCoverage]
     internal sealed class MessageAppTestFixture
-    { 
+    {
         private class StubMessageProvider : IMessageProvider
         {
             public StubMessageProvider(string message)
@@ -15,7 +15,7 @@ namespace CH.Testing.T1.Test
                 Message = message;
             }
 
-            public string Message { get; private set; }
+            public string Message { get; }
         }
 
         private class StubOutputter : IOutputter

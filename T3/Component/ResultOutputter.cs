@@ -17,7 +17,7 @@ namespace CH.Testing.T3.Component
         public void Output()
         {
             var results = _resultSource.Value;
-            foreach(var r in results)
+            foreach (var r in results)
                 _outputter.Output(r);
         }
     }

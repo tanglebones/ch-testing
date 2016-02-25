@@ -5,16 +5,17 @@ namespace CH.Testing.T2.Component
 {
     internal sealed class LineDiffResults : ILineDiffResults
     {
-        public LineDiffResults(ILineDiffAlgo lineDiffAlgo, ISource<IEnumerable<string>> aLinesSource, ISource<IEnumerable<string>> bLinesSource)
+        private readonly ISource<IEnumerable<string>> _aLinesSource;
+        private readonly ISource<IEnumerable<string>> _bLinesSource;
+        private readonly ILineDiffAlgo _lineDiffAlgo;
+
+        public LineDiffResults(ILineDiffAlgo lineDiffAlgo, ISource<IEnumerable<string>> aLinesSource,
+            ISource<IEnumerable<string>> bLinesSource)
         {
             _lineDiffAlgo = lineDiffAlgo;
             _aLinesSource = aLinesSource;
             _bLinesSource = bLinesSource;
         }
-
-        private readonly ISource<IEnumerable<string>> _aLinesSource;
-        private readonly ISource<IEnumerable<string>> _bLinesSource;
-        private readonly ILineDiffAlgo _lineDiffAlgo;
 
         IEnumerable<ILineDiffResult> ILineDiffResults.Results()
         {

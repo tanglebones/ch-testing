@@ -11,9 +11,9 @@ namespace CH.Testing.T2.Test
     internal sealed class ArgParserTestFixture
     {
         [Test]
-        [TestCase(new object[] { new[] { "a", "b", "c" }, -1 }, TestName = "[a, b, c] -1")]
-        [TestCase(new object[] { new[] { "a", "b", "c" }, 3 }, TestName = "[a, b, c] 3")]
-        [TestCase(new object[] { new string[] { }, 0 }, TestName = "[] 0")]
+        [TestCase(new object[] {new[] {"a", "b", "c"}, -1}, TestName = "[a, b, c] -1")]
+        [TestCase(new object[] {new[] {"a", "b", "c"}, 3}, TestName = "[a, b, c] 3")]
+        [TestCase(new object[] {new string[] {}, 0}, TestName = "[] 0")]
         [ExpectedException(typeof (IndexOutOfRangeException))]
         public void OutOfBounds(string[] args, int pos)
         {
@@ -25,9 +25,9 @@ namespace CH.Testing.T2.Test
         }
 
         [Test]
-        [TestCase(new object[] { new[] { "a", "b", "c" }, 0, "a" }, TestName = "[a, b, c] 0 -> a")]
-        [TestCase(new object[] { new[] { "a", "b", "c" }, 1, "b" }, TestName = "[a, b, c] 1 -> b")]
-        [TestCase(new object[] { new[] { "a", "b", "c" }, 2, "c" }, TestName = "[a, b, c] 2 -> c")]
+        [TestCase(new object[] {new[] {"a", "b", "c"}, 0, "a"}, TestName = "[a, b, c] 0 -> a")]
+        [TestCase(new object[] {new[] {"a", "b", "c"}, 1, "b"}, TestName = "[a, b, c] 1 -> b")]
+        [TestCase(new object[] {new[] {"a", "b", "c"}, 2, "c"}, TestName = "[a, b, c] 2 -> c")]
         public void Simple(string[] args, int pos, string expected)
         {
             // Arrange

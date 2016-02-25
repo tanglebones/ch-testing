@@ -27,7 +27,7 @@ namespace CH.Testing.T2.Test
 
             // Act
             var actual = linesResolver.Value;
-    
+
             // Assert
             lineParserParseCall.MustHaveHappened();
             contentSourceValueCall.MustHaveHappened();

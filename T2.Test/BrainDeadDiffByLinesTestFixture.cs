@@ -12,10 +12,11 @@ namespace CH.Testing.T2.Test
     internal sealed class BrainDeadDiffByLinesTestFixture
     {
         [Test]
-        [TestCase(new object[] { new[] { "a" }, new[] { "b" }, new[] { "-|a", "+|b" } }, TestName = "[a][b] -> -a,+b")]
-        [TestCase(new object[] { new[] { "a" }, new string[] { }, new[] { "-|a" } }, TestName = "[a][] -> -a")]
-        [TestCase(new object[] { new string[] { }, new[] { "b" }, new[] { "+|b" } }, TestName = "[][b] -> +b")]
-        [TestCase(new object[] { new[] { "a", "c" }, new[] { "b", "c" }, new[] { "-|a", "+|b", "=|c" } }, TestName = "[ac][bc] -> -a,+b,=c")]
+        [TestCase(new object[] {new[] {"a"}, new[] {"b"}, new[] {"-|a", "+|b"}}, TestName = "[a][b] -> -a,+b")]
+        [TestCase(new object[] {new[] {"a"}, new string[] {}, new[] {"-|a"}}, TestName = "[a][] -> -a")]
+        [TestCase(new object[] {new string[] {}, new[] {"b"}, new[] {"+|b"}}, TestName = "[][b] -> +b")]
+        [TestCase(new object[] {new[] {"a", "c"}, new[] {"b", "c"}, new[] {"-|a", "+|b", "=|c"}},
+            TestName = "[ac][bc] -> -a,+b,=c")]
         public void Simple(IEnumerable<string> a, IEnumerable<string> b, IEnumerable<string> expected)
         {
             // Arrange

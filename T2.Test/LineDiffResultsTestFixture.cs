@@ -24,7 +24,7 @@ namespace CH.Testing.T2.Test
             aLinesValueCall.Returns(aLines);
             var bLinesValueCall = A.CallTo(() => bLinesSource.Value);
             bLinesValueCall.Returns(bLines);
-            var lineDiffAlgoDiffCall = A.CallTo(() => lineDiffAlgo.Diff(aLines,bLines));
+            var lineDiffAlgoDiffCall = A.CallTo(() => lineDiffAlgo.Diff(aLines, bLines));
             var expected = new[] {A.Fake<ILineDiffResult>()};
             lineDiffAlgoDiffCall.Returns(expected);
             var ld = new LineDiffResults(lineDiffAlgo, aLinesSource, bLinesSource) as ILineDiffResults;
@@ -36,7 +36,7 @@ namespace CH.Testing.T2.Test
             aLinesValueCall.MustHaveHappened();
             bLinesValueCall.MustHaveHappened();
             lineDiffAlgoDiffCall.MustHaveHappened();
-            Assert.AreEqual(actual,expected);
+            Assert.AreEqual(actual, expected);
         }
     }
 }

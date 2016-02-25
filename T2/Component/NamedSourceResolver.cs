@@ -4,8 +4,8 @@ namespace CH.Testing.T2.Component
 {
     internal sealed class NamedSourceResolver : ISource<string>
     {
-        private readonly INamedSourceToString _fileReader;
         private readonly ISource<string> _fileNameSource;
+        private readonly INamedSourceToString _fileReader;
 
         public NamedSourceResolver(INamedSourceToString fileReader, ISource<string> fileNameSource)
         {
@@ -13,6 +13,9 @@ namespace CH.Testing.T2.Component
             _fileNameSource = fileNameSource;
         }
 
-        string ISource<string>.Value { get { return _fileReader.ReadFrom(_fileNameSource.Value); } }
+        string ISource<string>.Value
+        {
+            get { return _fileReader.ReadFrom(_fileNameSource.Value); }
+        }
     }
 }

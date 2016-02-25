@@ -1,4 +1,5 @@
-﻿using CH.Testing.T3.Interface;
+﻿using System;
+using CH.Testing.T3.Interface;
 
 namespace CH.Testing.T3.Component
 {
@@ -6,7 +7,7 @@ namespace CH.Testing.T3.Component
     {
         public void Output(string what)
         {
-            System.Console.WriteLine(what);
+            Console.WriteLine(what);
         }
     }
 }
